@@ -10,11 +10,14 @@ namespace ReactTemplate.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
+
+        public ICollection<PointOfInterstsDto> PointsOfInterest { get; set; } = new List<PointOfInterstsDto>(); 
+
         public int NumberOfPointsOFInterest
         {
-            get { return PointsOInterest.Count; }
+            get { return PointsOfInterest.Count; }
         }
-        public ICollection<PointOfInterstsDto> PointsOInterest { get; set; } = new List<PointOfInterstsDto>();
+       
 
     }
     
